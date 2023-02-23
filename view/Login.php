@@ -21,7 +21,7 @@
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-                <input type="password" name="password" id="password" class="form-control" placeholder="password" required />
+                <input type="password" minlength="8" maxlength="20" name="password" id="password" class="form-control" placeholder="password" required />
             </div>
 
             <!-- 2 column grid layout for inline styling -->
@@ -36,7 +36,7 @@
 
                 <div class="col">
                     <!-- Simple link -->
-                    <a href="#!">Forgot password?</a>
+                    <a href="/www/signup.php">Not a user SignUp?</a>
                 </div>
             </div>
 

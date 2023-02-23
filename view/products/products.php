@@ -4,15 +4,14 @@ include "./getProduct.php";
 
 
 <body>
-  <section class="container-fluid mt-5" style="background-color: #eee;">
-    <div class="container py-5">
-      <div class="row justify-content-center mb-3">
+  <section class="container-fluid pt-5" style="background-color: #eee;min-height:82vh;">
+    <div class="container">
+      <div class="row justify-content-center pb-3">
         <?php
         foreach ($products as  $product) {
-
           print <<<HTML
   <div class="container">
-    <div class="row justify-content-center mb-3">
+    <div class="row justify-content-center">
       <div class="col-md-12 col-xl-10">
         <div class="card shadow-0 border rounded-3">
           <div class="card-body">
@@ -60,7 +59,7 @@ include "./getProduct.php";
               <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                 <div class="d-flex flex-row align-items-center mb-1">
                   <h4 class="mb-1 me-1">{$product["price"]}</h4>
-                  <span class="text-danger"><s>{$product["oldrice"]}</s></span>
+                  <span class="text-danger"><s>{$product["oldPrice"]}</s></span>
                 </div>
                 <h6 class="text-success">Free shipping</h6>
                 <div class="d-flex flex-column mt-4">

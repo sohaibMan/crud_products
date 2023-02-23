@@ -1,7 +1,4 @@
-<?php
-?>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:10vh">
   <a class="navbar-brand" href="#">Dashboard</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,14 +23,14 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
-    <ul>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-        Add new item
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+      Add new item
+    </button>
+    <a href="logout.php" style="text-decoration:none;color:white;" class="ml-2">
+      <button type="button" class="btn btn-secondary">
+        X
       </button>
-      <a href="logout.php" style="text-decoration:none;color:white;">
-        <button type="button" class="btn btn-secondary">
-          X
-        </button>
-      </a>
+    </a>
+    <ul>
   </div>
 </nav>

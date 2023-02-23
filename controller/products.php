@@ -5,7 +5,6 @@ if (!isset($_SESSION['user_id'])) {
 }
 $id = $_SESSION['user_id'];
 $name = $_SESSION['name'];
-echo $id;
 include "./model/Products.php";
 $ProductsController = new Products($id);
 $products = $ProductsController->getProducts();
