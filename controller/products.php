@@ -1,6 +1,11 @@
 <?php
-$name = "adam";
-$id = 1; // to be get from another file 
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header(('Location: /www/login.php'));
+}
+$id = $_SESSION['user_id'];
+$name = $_SESSION['name'];
+echo $id;
 include "./model/Products.php";
 $ProductsController = new Products($id);
 $products = $ProductsController->getProducts();
