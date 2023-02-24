@@ -1,9 +1,14 @@
-user_id,title,subTitle,description,price,oldPrice,product_id
-1,hello world,this is a description for user 1,tall 1,11,12,1
-1,hello world,this is a description,tall user 1 ,11,15,2
-1,hello world,this is a description,tall 1,11,15,3
-1,hello world,this is a description,tall  user 1 ,11,15,4
-2,hello world,this is a description,tall 2,11,15,5
-2,hello world,this is a description,tall 2,11,15,6
-3,hello world,this is a description,tall 3,11,15,7
-1,iphone X,this is the best phone ever user 2,smartphone,110,120,8
+user_id,title,subTitle,description,price,oldPrice,product_id,img_link
+1,"hello world","this is a description for user 1","tall 1",11,12,1,https://assets.aboutamazon.com/dims4/default/ea340b9/2147483647/strip/true/crop/2000x1500+0+0/resize/991x743!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fcb%2F88%2F4d5d39c448ba8055dd74315db5cb%2Fcropped-rufus.jpg
+1,"hello world","this is a description","tall user 1 ",11,15,2,https://assets.aboutamazon.com/dims4/default/13a490c/2147483647/strip/true/crop/2000x1127+0+753/resize/660x372!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fc2%2Ff9%2F5f14445748fab399dc00f2b1da22%2F20180108-dogsofamazon-043.jpg
+1,"hello world","this is a description","tall 1",11,15,3,https://images-na.ssl-images-amazon.com/images/G/01/error/161._TTD_.jpg
+1,"hello world","this is a description","tall  user 1 ",11,15,4,https://images-na.ssl-images-amazon.com/images/G/01/error/161._TTD_.jpg
+2,"hello world","this is a description","tall 2",11,15,6,https://images-na.ssl-images-amazon.com/images/G/01/error/161._TTD_.jpg
+3,"hello world","this is a description","tall 3",11,15,7,https://images-na.ssl-images-amazon.com/images/G/01/error/161._TTD_.jpg
+1,produi,titl,alo3,33,23,63f91c83674fa,https://images-na.ssl-images-amazon.com/images/G/01/error/161._TTD_.jpg
+1,tele,"last one","test ",110,100,63f91cb262067,https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.apple.com%2Fnewsroom%2Fimages%2Fproduct%2Fiphone%2Fstandard%2FApple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg&imgrefurl=https%3A%2F%2Fwww.apple.com%2Fnewsroom%2F2022%2F09%2Fapple-introduces-iphone-14-and-iphone-14-plus%2F&tbnid=hT5lRrA8eAwpSM&vet=12ahUKEwjWw5bi_K79AhXlpycCHemBAwQQMygDegUIARDjAQ..i&docid=u4tvu4we3wqGJM&w=1440&h=810&q=iphone%2014&ved=2ahUKEwjWw5bi_K79AhXlpycCHemBAwQQMygDegUIARDjAQ
+,,,,,,,
+user63f91d108889a,"What About a Graphics Card?","GeForce GTX 1080","All laptops technically have graphics cards (also called “discrete” graphics and GPU), but most are bundled into the motherboard with the processor. This approach, known as “integrated graphics,” is fine for most users. You’ll be able to watch HD movies and even play casual games without issue.
+
+If you're a gamer or do a lot of video editing, you'll want a laptop with a discrete graphics card—a separate and much more powerful graphics card. AMD and Nvidia make most of the graphics cards you'll find in laptops.",100,112,63f91dc78db5c,"https://media.wired.com/photos/605d26e8298c3bb08b8e83af/master/w_1600,c_limit/Gear-Laptop-Guide-RAM-1303444841.jpg"
+user63f91d108889a,"How Much Storage Do You Need?"," SSD (which it is), but it","SSDs are faster, especially if they use an NVMe connection, which moves data in and out of the hard drive much quicker than the older standard, known as SATA. Sometimes you'll find laptops with an SSD with NVMe to run the operating system but an older SATA drive to store files. This gives you the best of both worlds: speed where you need it, but still budget-friendly.",134,112,63f91e23309e1,"https://media.wired.com/photos/619ea5e5f7172c8b76dfd532/master/w_1600,c_limit/Gear-Samsung-870-Evo-SSD.jpg"

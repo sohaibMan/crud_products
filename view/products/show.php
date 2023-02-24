@@ -13,7 +13,7 @@ include "./getProduct.php";
           $deleteLink = "controller/deleteProduct.php/?product_id=" . $product["product_id"];
           $detailsLink = "controller/detailsProduct.php/?product_id" . $product["product_id"];
           print <<<HTML
-  <div class="container">
+  <div class="container py-2">
     <div class="row justify-content-center">
       <div class="col-md-12 col-xl-10">
         <div class="card shadow-0 border rounded-3">
@@ -21,7 +21,7 @@ include "./getProduct.php";
             <div class="row">
               <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                 <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                  <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=400" class="w-100" />
+                  <img src={$product["img_link"]} class="w-100" />
                   <a href="#!">
                     <div class="hover-overlay">
                       <div class="mask" style="background-color: rgba(253, 253, 253, 0.15)"></div>
@@ -67,7 +67,8 @@ include "./getProduct.php";
                 <h6 class="text-success">Free shipping</h6>
                 <div class="d-flex flex-column mt-4">
                   <!-- <a style="outline: none;color:white" href={$detailsLink}> -->
-                    <a  href={$detailsLink} class="btn btn-primary btn-sm" type="button">
+                    <!-- href={$detailsLink} replace it the href below -->
+                    <a  href="#" class="btn btn-primary btn-sm" type="button">
                     Details
                   </a>
                   <!-- </a> -->
