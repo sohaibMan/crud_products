@@ -1,7 +1,7 @@
 <?php
 function isUserExist($email, $password)
 {
-    $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/www/model/data/users.csv", "r");
+    $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/model/data/users.csv", "r");
     if (!$file) {
         echo "Error opening file";
         echo "error: " . $file;
@@ -25,7 +25,7 @@ function createUser($user_name, $email, $password, $password_repeated)
     if (!strcmp($password, $password_repeated) == 0) {
         return "Please Provide the same password";
     }
-    $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/www/model/data/users.csv", "a+");
+    $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/model/data/users.csv", "a+");
     if (!$file) {
         echo "Error opening file";
         echo "error: " . $file;

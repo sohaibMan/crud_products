@@ -43,7 +43,7 @@
                                 <div class="d-flex align-items-center justify-content-center mx-4 mb-3 mb-lg-4">
                                     <button type="submit" class="btn btn-primary btn-lg">Register</button>
                                     <div class="col">
-                                        <a href="/www/login.php">Already a user Login?</a>
+                                        <a href="/login.php">Already a user Login?</a>
                                     </div>
                                 </div>
                             </form>
@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                            <img src="/www/view/assets/signup.jpg" class="img-fluid" alt="Sample image">
+                            <img src="/view/assets/signup.jpg" class="img-fluid" alt="Sample image">
 
                         </div>
                     </div>

@@ -23,7 +23,7 @@ class Products
     private $file;
     public function __construct($id)
     {
-        $this->file = fopen($_SERVER['DOCUMENT_ROOT'] . "/www/model/data/products.csv", "r");
+        $this->file = fopen($_SERVER['DOCUMENT_ROOT'] . "/model/data/products.csv", "r");
         if (!$this->file) {
             echo "Error opening file";
             echo "error: " . $this->file;
@@ -62,3 +62,30 @@ class Products
 
 // $test = new Products(1);
 // print_r($test->getProducts());
+
+function deleteProduct($product_id)
+{
+
+    // return get_current_user();
+    $productFilePath = $_SERVER['DOCUMENT_ROOT'] . "/model/data/products.csv";
+    $productTmpFilePath = $_SERVER['DOCUMENT_ROOT'] . "/model/data/products-tmp.csv";
+    $file = fopen($productFilePath, "r");
+    $fptemp = fopen($productTmpFilePath, "a");
+    if (!$file || !$fptemp) {
+        echo "Error opening file";
+        fclose($file);
+        fclose($fptemp);
+        exit();
+    }
+
+    while (!feof($file)) {
+        $row = fgetcsv($file);
+        if (strcmp($row[6], $product_id) !== 0)
+            fputcsv($fptemp, array($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]));
+    }
+
+    fclose($file);
+    fclose($fptemp);
+    unlink($productFilePath);
+    rename($productTmpFilePath, $productFilePath);
+}

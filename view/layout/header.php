@@ -23,9 +23,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-      Add new item
-    </button>
+    <?php include("./view/products/add.php"); ?>
     <a href="logout.php" style="text-decoration:none;color:white;" class="ml-2">
       <button type="button" class="btn btn-secondary">
         X

@@ -1,9 +1,9 @@
-user_id,title,subTitle,description,price,oldPrice
-1,hello world,this is a description for user 1,tall 1,11,12,24 power
-1,hello world,this is a description,tall user 1 ,11,15,24 power
-1,hello world,this is a description,tall 1,11,15,24 power
-1,hello world,this is a description,tall  user 1 ,11,15,24 power
-2,hello world,this is a description,tall 2,11,15,24 power
-2,hello world,this is a description,tall 2,11,15,24 power
-3,hello world,this is a description,tall 3,11,15,24 power
-1,iphone X,this is the best phone ever user 2,smartphone,110,120,24 power
+user_id,title,subTitle,description,price,oldPrice,product_id
+1,hello world,this is a description for user 1,tall 1,11,12,1
+1,hello world,this is a description,tall user 1 ,11,15,2
+1,hello world,this is a description,tall 1,11,15,3
+1,hello world,this is a description,tall  user 1 ,11,15,4
+2,hello world,this is a description,tall 2,11,15,5
+2,hello world,this is a description,tall 2,11,15,6
+3,hello world,this is a description,tall 3,11,15,7
+1,iphone X,this is the best phone ever user 2,smartphone,110,120,8

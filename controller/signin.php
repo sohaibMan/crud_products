@@ -9,7 +9,7 @@ if (isset($_POST["user_name"]) && isset($_POST["email"]) && isset($_POST["passwo
     $ackacklondge = createUser($user_name, $email, $password, $password_repeated); //return 1 if the user was successfully created otherwise return error 
 
     if ($ackacklondge == 1) {
-        header("Location:/www/login.php");
+        header("Location:/login.php");
     } else $error = $ackacklondge;
 }
 include "./view/Signup.php";

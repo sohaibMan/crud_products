@@ -39,7 +39,7 @@
 
                                     <div class="col">
                                         <!-- Simple link -->
-                                        <a href="/www/signup.php">Not a user SignUp?</a>
+                                        <a href="/signup.php">Not a user SignUp?</a>
                                     </div>
                                 </div>
 
@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                            <img src="/www/view/assets/signup.jpg" class="img-fluid" alt="Sample image">
+                            <img src="/view/assets/signup.jpg" class="img-fluid" alt="Sample image">
 
                         </div>
                     </div>
