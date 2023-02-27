@@ -1,4 +1,5 @@
 <?php
+define('PASSWORD_DEFAULT', "NODE JS IS THE BEST ONE");
 function isUserExist($email, $password)
 {
     $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/model/data/users.csv", "r");
@@ -13,7 +14,7 @@ function isUserExist($email, $password)
     $csvHeader = fgetcsv($file);
     while (!feof($file)) {
         $row = fgetcsv($file);
-        if (strcmp($row[1], $email) == 0 && strcmp($row[2], $password) == 0) {
+        if (strcmp($row[1], $email) == 0 && password_verify($password, $row[2]) == true) {
             return [$row[0], $row[3]];
         }
     }
@@ -41,6 +42,6 @@ function createUser($user_name, $email, $password, $password_repeated)
             return "Email already in use";
         }
     }
-    fputcsv($file, array(uniqid("user"), $email, $password, $user_name));
+    fputcsv($file, array(uniqid("user"), $email, password_hash($password, PASSWORD_DEFAULT), $user_name));
     return 1;
 }
