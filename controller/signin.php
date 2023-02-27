@@ -1,15 +1,19 @@
 <?php
+if (isset($_SESSION["user_id"])) {
+    header(('Location:/products.php'));
+}
 $error;
-if (isset($_POST["user_name"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["password_repeated"])) {
-    $user_name = $_POST["user_name"];
+if (isset($_POST["email"]) && isset($_POST["password"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $password_repeated = $_POST["password_repeated"];
-    include "./model/Users.php";
-    $ackacklondge = createUser($user_name, $email, $password, $password_repeated); //return 1 if the user was successfully created otherwise return error 
-
-    if ($ackacklondge == 1) {
-        header("Location:/login.php");
-    } else $error = $ackacklondge;
+    include("./model/Users.php");
+    if (isUserExist($email, $password) == -1)  $error = "email or password is wrong ";
+    else {
+        session_start();
+        $_SESSION['user_id'] = isUserExist($email, $password)[0]; //it return the user id
+        $_SESSION['name'] = isUserExist($email, $password)[1]; //it return the user id
+        header(('Location:/products.php'));
+    }
 }
-include "./view/Signup.php";
+
+include("./view/Login.php");
