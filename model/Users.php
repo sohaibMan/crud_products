@@ -10,38 +10,40 @@ function isUserExist($email, $password)
         fclose($file);
         exit();
     }
-
-    $csvHeader = fgetcsv($file);
     while (!feof($file)) {
         $row = fgetcsv($file);
         if (strcmp($row[1], $email) == 0 && password_verify($password, $row[2]) == true) {
-            return [$row[0], $row[3]];
+            return $row[0];
         }
     }
-    return -1;
+    return false;
 }
-function createUser($user_name, $email, $password, $password_repeated)
+function userIsCreatedSuccessfully($user_id, $user_name, $email, $password)
 {
 
-    if (!strcmp($password, $password_repeated) == 0) {
-        return "Please Provide the same password";
-    }
+
     $file = fopen($_SERVER['DOCUMENT_ROOT'] . "/model/data/users.csv", "a+");
     if (!$file) {
         echo "Error opening file";
         echo "error: " . $file;
         echo $_SERVER['DOCUMENT_ROOT'] . "/model/data/users.csv";
         fclose($file);
-        exit();
+        return false;
     }
-
     $csvHeader = fgetcsv($file);
     while (!feof($file)) {
         $row = fgetcsv($file);
-        if (strcmp($row[1], $email) == 0) {
-            return "Email already in use";
-        }
+        if (strcmp($row[1], $email) == 0) return false;
     }
-    fputcsv($file, array(uniqid("user"), $email, password_hash($password, PASSWORD_DEFAULT), $user_name));
-    return 1;
+
+    mkdir($_SERVER['DOCUMENT_ROOT'] . "/model/data/$user_id");
+    mkdir($_SERVER['DOCUMENT_ROOT'] . "/model/data/$user_id/images");
+    touch($_SERVER['DOCUMENT_ROOT'] . "/model/data/$user_id/products.csv");
+    // the image will be with same product_id
+    $products = fopen($_SERVER['DOCUMENT_ROOT'] . "/model/data/$user_id/products.csv", "w");
+    fputcsv($products, array("product_id", "product_name", "sub_title", "product_description", "product_price", "product_old_price"));
+    fclose($products);
+    fputcsv($file, array($user_id, $email, password_hash($password, PASSWORD_DEFAULT), $user_name));
+    fclose($file);
+    return true;
 }

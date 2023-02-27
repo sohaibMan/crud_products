@@ -1,9 +1,3 @@
-<?php
-include "./getProduct.php";
-
-?>
-
-
 <body>
   <section class="container-fluid pt-5" style="background-color: #eee;min-height:82vh;">
     <div class="container">
@@ -12,6 +6,8 @@ include "./getProduct.php";
         foreach ($products as  $product) {
           $deleteLink = "controller/deleteProduct.php/?product_id=" . $product["product_id"];
           $detailsLink = "controller/detailsProduct.php/?product_id" . $product["product_id"];
+          $user_id = $_SESSION['user_id'];
+          $imgPath = "http://localhost/model/data/" . $user_id . "/images/" . $product["product_id"] . ".png";
           print <<<HTML
   <div class="container py-2">
     <div class="row justify-content-center">
@@ -21,7 +17,7 @@ include "./getProduct.php";
             <div class="row">
               <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                 <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                  <img src={$product["img_link"]} class="w-100" />
+                  <img src={$imgPath} class="w-100" />
                   <a href="#!">
                     <div class="hover-overlay">
                       <div class="mask" style="background-color: rgba(253, 253, 253, 0.15)"></div>
@@ -38,7 +34,7 @@ include "./getProduct.php";
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                   </div>
-                  <span>{$product["subTitle"]}</span>
+                  <span>{$product["sub_title"]}</span>
                 </div>
                 <div class="mt-1 mb-0 text-muted small">
                   <span>100% cotton</span>
@@ -56,13 +52,13 @@ include "./getProduct.php";
                   <span>Casual<br /></span>
                 </div> -->
                 <p class="text-truncate mb-4 mb-md-0">
-                {$product["description"]}
+                {$product["product_description"]}
                 </p>
               </div>
               <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                 <div class="d-flex flex-row align-items-center mb-1">
-                  <h4 class="mb-1 me-1">{$product["price"]}</h4>
-                  <span class="text-danger"><s>{$product["oldPrice"]}</s></span>
+                  <h4 class="mb-1 me-1">{$product["product_price"]}</h4>
+                  <span class="text-danger"><s>{$product["product_old_price"]}</s></span>
                 </div>
                 <h6 class="text-success">Free shipping</h6>
                 <div class="d-flex flex-column mt-4">

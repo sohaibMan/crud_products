@@ -23,21 +23,21 @@
 
 
                                 <div class="form-outline mb-3 flex-fill mb-0">
-                                    <input type="email" id="form3Example3c" name="email" class="form-control" placeholder="Your Email" required />
+                                    <input type="email" id="form3Example3c" name="email" class="form-control" placeholder="Email" required />
                                 </div>
 
                                 <div class="form-outline mb-3 flex-fill mb-0">
-                                    <input type="text" id="form3Example1c" name="user_name" class="form-control" placeholder="Your name" required />
-                                </div>
-
-
-                                <div class="form-outline mb-3 flex-fill mb-0">
-                                    <input type="password" id="form3Example4c" minlength="8" maxlength="20" name="password" class="form-control" placeholder="Your Password" required />
+                                    <input type="text" id="form3Example1c" name="user_name" class="form-control" placeholder="User name" required />
                                 </div>
 
 
                                 <div class="form-outline mb-3 flex-fill mb-0">
-                                    <input type="password" id="form3Example4cd" minlength="8" maxlength="20" name="password_repeated" class="form-control" placeholder="Repeat your password" required />
+                                    <input type="password" id="form3Example4c" minlength="8" maxlength="20" name="password" class="form-control" placeholder="Password" required />
+                                </div>
+
+
+                                <div class="form-outline mb-3 flex-fill mb-0">
+                                    <input type="password" id="form3Example4cd" minlength="8" maxlength="20" name="password_repeated" class="form-control" placeholder="Repeat password" required />
                                 </div>
                                 <?php isset($error) ? include("./view/Alert.php") : "" ?>
                                 <div class="d-flex align-items-center justify-content-center mx-4 mb-3 mb-lg-4">
