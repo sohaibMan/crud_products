@@ -69,10 +69,11 @@ function deleteProduct($product_id)
     fclose($file);
     fclose($fptemp);
     unlink($productFilePath);
+    unlink($_SERVER['DOCUMENT_ROOT'] . "/model/data/$user_id/images/" . $product_id . ".png");
     rename($productTmpFilePath, $productFilePath);
 }
 
-function create_product($product_id, $user_id, $title, $subTitle, $description, $price, $oldPrice)
+function create_product($product_id, $user_id, $title, $subTitle, $description, $price, $oldPrice,)
 {
     $productFilePath = $_SERVER['DOCUMENT_ROOT'] . "/model/data/$user_id/products.csv";
     $file = fopen($productFilePath, "a");
