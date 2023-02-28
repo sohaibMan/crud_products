@@ -5,7 +5,7 @@
 <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form method="post" action="../../controller/addProduct.php">
+            <form method="POST" action="../../controller/addProduct.php">
 
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Add new Product</h5>
@@ -19,28 +19,29 @@
                     </div> -->
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Title</label>
-                        <input type="text" class="form-control" name="title" minlength="10" id="exampleFormControlInput1" placeholder="new Product" required>
+                        <input type="text" class="form-control" name="title" minlength="10" id="exampleFormControlInput1" placeholder="new Product" Rrequired>
                     </div>
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Sub Title</label>
-                        <input type="text" class="form-control" name="subTitle" id="exampleFormControlInput1" minlength="10" placeholder="more info about the item" required>
+                        <input type="text" class="form-control" name="subTitle" id="exampleFormControlInput1" minlength="10" placeholder="more info about the item" Rrequired>
                     </div>
                     <div class="mb-2">
                         <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" minlength="20" placeholder="a description of the item" rows="3" required></textarea>
+                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" minlength="20" placeholder="a description of the item" rows="3" Rrequired></textarea>
                     </div>
 
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Item price</label>
-                        <input type="number" min="0" max="10000" name="price" class="form-control" id="exampleFormControlInput1" required>
+                        <input type="number" min="0" max="10000" name="price" class="form-control" id="exampleFormControlInput1" Rrequired>
                     </div>
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Item old price</label>
-                        <input type="number" min="0" max="10000" name="oldPrice" class="form-control" id="exampleFormControlInput1" required>
+                        <input type="number" min="0" max="10000" name="oldPrice" class="form-control" id="exampleFormControlInput1" Rrequired>
                     </div>
                     <div class="mb-2">
-                        <label for="exampleFormControlInput1" class="form-label">Image link</label>
-                        <input type="url" name="link" class="form-control" id="exampleFormControlInput1" required>
+                        <label for="exampleFormControlInput1" class="form-label">Upload image</label>
+                        <!-- <input type="image" name="link" class="form-control" id="exampleFormControlInput1" Rrequired> -->
+                        <input type="file" accept="image/png" name="image" Rrequired />
                     </div>
 
                 </div>
